@@ -1,10 +1,9 @@
 package spring5.test;
 
 import org.junit.Test;
-import org.springframework.beans.factory.BeanFactory;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-import spring5.User;
+import spring5.bean.User;
 
 /**
  * @author Chenyang

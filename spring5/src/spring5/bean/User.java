@@ -1,4 +1,4 @@
-package spring5;
+package spring5.bean;
 
 /**
  * @author Chenyang
