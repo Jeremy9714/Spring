@@ -7,6 +7,7 @@ package spring5.bean;
 public class Book {
     private String name;
     private String author;
+    private String address;
 
     public void setName(String name) {
         this.name = name;
@@ -16,7 +17,11 @@ public class Book {
         this.author = author;
     }
 
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
     public void testBook() {
-        System.out.println(name + "::" + author);
+        System.out.println(name + "::" + author + "::" + address);
     }
 }

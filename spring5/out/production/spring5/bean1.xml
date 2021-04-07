@@ -12,6 +12,10 @@
         <!--使用property标签完成属性注入-->
         <property name="name" value="Java教程"></property>
         <property name="author" value="Github"></property>
+        <property name="address">
+            <!--使用null标签向属性设置一个空值-->
+            <null/>
+        </property>
     </bean>
 
     <!--有参构造方法注入属性-->
