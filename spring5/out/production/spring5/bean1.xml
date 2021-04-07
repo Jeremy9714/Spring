@@ -6,10 +6,17 @@
     <!--配置bean对象创建-->
     <bean id="user" class="spring5.bean.User"></bean>
 
-    <!---->
+    <!--set方法注入属性-->
     <bean id="book" class="spring5.bean.Book">
         <!--使用property标签完成属性注入-->
         <property name="name" value="Java教程"></property>
         <property name="author" value="Github"></property>
+    </bean>
+
+    <!--有参构造方法注入属性-->
+    <bean id="order" class="spring5.bean.Order">
+        <!--使用constructor-arg标签提供构造器参数，完成属性注入-->
+        <constructor-arg index="0" value="order_1"/>
+        <constructor-arg name="address" value="address_1"/>
     </bean>
 </beans>

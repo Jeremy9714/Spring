@@ -3,15 +3,22 @@ package spring5.test;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-import org.springframework.context.support.FileSystemXmlApplicationContext;
 import spring5.bean.Book;
 import spring5.bean.User;
+import spring5.bean.Order;
 
 /**
  * @author Chenyang
  * @create 2021-04-06-14:48
  */
 public class TestSpring5 {
+
+    @Test
+    public void testOrder() {
+        ApplicationContext context = new ClassPathXmlApplicationContext("bean1.xml");
+        Order order = context.getBean("order", Order.class);
+        order.testOrder();
+    }
 
     @Test
     public void testBook() {
