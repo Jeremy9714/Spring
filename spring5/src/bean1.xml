@@ -5,4 +5,11 @@
 
     <!--配置bean对象创建-->
     <bean id="user" class="spring5.bean.User"></bean>
+
+    <!---->
+    <bean id="book" class="spring5.bean.Book">
+        <!--使用property标签完成属性注入-->
+        <property name="name" value="Java教程"></property>
+        <property name="author" value="Github"></property>
+    </bean>
 </beans>

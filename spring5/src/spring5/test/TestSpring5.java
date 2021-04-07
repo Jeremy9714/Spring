@@ -3,6 +3,8 @@ package spring5.test;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.context.support.FileSystemXmlApplicationContext;
+import spring5.bean.Book;
 import spring5.bean.User;
 
 /**
@@ -12,7 +14,14 @@ import spring5.bean.User;
 public class TestSpring5 {
 
     @Test
-    public void testAdd(){
+    public void testBook() {
+        ApplicationContext context = new ClassPathXmlApplicationContext("bean1.xml");
+        Book book = context.getBean("book", Book.class);
+        book.testBook();
+    }
+
+    @Test
+    public void testAdd() {
         //加载spring配置文件
         ApplicationContext context = new ClassPathXmlApplicationContext("bean1.xml");
 //        BeanFactory context = new ClassPathXmlApplicationContext("bean1.xml");
