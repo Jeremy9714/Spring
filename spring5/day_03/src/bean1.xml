@@ -6,6 +6,17 @@
                            http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 
     <!--开启组件扫描，base-package属性知道指定了要扫描的包·-->
-    <context:component-scan base-package="service,dao"></context:component-scan>
+<!--    <context:component-scan base-package="service,dao"></context:component-scan>-->
+
+    <!--不使用默认过滤器的组件扫描-->
+    <context:component-scan base-package="service, dao" use-default-filters="false">
+        <!--设置要扫描的内容-->
+        <context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
+    </context:component-scan>
+
+    <context:component-scan base-package="service, dao">
+        <!--设置不扫描的内容-->
+        <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
+    </context:component-scan>
 
 </beans>
