@@ -1,5 +1,6 @@
 package test;
 
+import autowire.Employee;
 import bean.Orders;
 import collection.Book;
 import collection.Course;
@@ -13,6 +14,13 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  * @create 2021-04-08-11:09
  */
 public class TestCollection {
+
+    @Test
+    public void test5() {
+        ApplicationContext context = new ClassPathXmlApplicationContext("bean5.xml");
+        Employee employee = context.getBean("employee", Employee.class);
+        System.out.println(employee);
+    }
 
     @Test
     public void test4() {

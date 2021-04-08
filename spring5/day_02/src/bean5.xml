@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--autowire属性用于设置自动装配规则(属性名称或者属性类型)-->
+<!--    <bean id="employee" class="autowire.Employee" autowire="byName">-->
+    <bean id="employee" class="autowire.Employee" autowire="byType">
+<!--        <property name="department" ref="department"></property>-->
+    </bean>
+    <bean id="department" class="autowire.Department"></bean>
+<!--    <bean id="department1" class="autowire.Department"></bean>-->
+</beans>
