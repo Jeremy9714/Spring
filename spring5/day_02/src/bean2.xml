@@ -11,7 +11,8 @@
         <value>ele_2</value>
     </util:list>
 
-    <bean id="book" class="collection.Book">
+    <!--scope属性用于设置bean对象是单例还是多例-->
+    <bean id="book" class="collection.Book" scope="prototype">
         <!--使用提取的集合注入-->
         <property name="list" ref="elements"></property>
     </bean>

@@ -24,6 +24,9 @@ public class TestCollection {
     public void test2() {
         ApplicationContext context = new ClassPathXmlApplicationContext("bean2.xml");
         Book book = context.getBean("book", Book.class);
+        Book book1 = context.getBean("book", Book.class);
+        System.out.println(book);
+        System.out.println(book1);
         book.print();
     }
 
