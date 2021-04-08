@@ -4,24 +4,31 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <bean id="student" class="collection.Student">
+        <!--注入数组类型-->
         <property name="arrays">
             <array>
                 <value>course_1</value>
                 <value>course_2</value>
             </array>
         </property>
+
+        <!--注入list类型-->
         <property name="list">
             <list>
                 <value>list_1</value>
                 <value>list_2</value>
             </list>
         </property>
+
+        <!--注入set类型-->
         <property name="set">
             <set>
                 <value>set_1</value>
                 <value>set_2</value>
             </set>
         </property>
+
+        <!--注入map类型-->
         <property name="map">
             <map>
                 <entry key="key_1" value="value_1"></entry>
@@ -29,6 +36,7 @@
             </map>
         </property>
 
+        <!--注入元素为对象类型值的集合类型-->
         <property name="course">
             <list>
                 <ref bean="course1"></ref>

@@ -12,6 +12,12 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class TestCollection {
 
     @Test
+    public void test2() {
+        ApplicationContext context = new ClassPathXmlApplicationContext("bean2.xml");
+
+    }
+
+    @Test
     public void test1() {
         ApplicationContext context = new ClassPathXmlApplicationContext("bean1.xml");
         Student student = context.getBean("student", Student.class);
