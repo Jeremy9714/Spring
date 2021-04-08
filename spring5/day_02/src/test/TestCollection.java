@@ -1,5 +1,6 @@
 package test;
 
+import bean.Orders;
 import collection.Book;
 import collection.Course;
 import collection.Student;
@@ -12,6 +13,16 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  * @create 2021-04-08-11:09
  */
 public class TestCollection {
+
+    @Test
+    public void test4() {
+        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("bean4.xml");
+        Orders orders = context.getBean("orders", Orders.class);
+        System.out.print("第四步，获取bean对象: ");
+        System.out.println(orders);
+        //手动调用bean的销毁方法
+        context.close();
+    }
 
     @Test
     public void test3() {
