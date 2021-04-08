@@ -1,5 +1,6 @@
 package test;
 
+import collection.Book;
 import collection.Student;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
@@ -14,7 +15,8 @@ public class TestCollection {
     @Test
     public void test2() {
         ApplicationContext context = new ClassPathXmlApplicationContext("bean2.xml");
-
+        Book book = context.getBean("book", Book.class);
+        book.print();
     }
 
     @Test
