@@ -1,5 +1,6 @@
 package aop;
 
+import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.stereotype.Component;
 
 /**
@@ -8,7 +9,6 @@ import org.springframework.stereotype.Component;
  * @author Chenyang
  * @create 2021-04-09-20:28
  */
-
 @Component
 public class User {
     public void add() {
