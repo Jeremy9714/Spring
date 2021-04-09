@@ -9,7 +9,7 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
  * @create 2021-04-09-21:12
  */
 @Configuration
-@ComponentScan(basePackages={"aop"})
-@EnableAspectJAutoProxy(proxyTargetClass=true) //开启生成代理对象(aop)
+@ComponentScan(basePackages={"aopanno"})
+@EnableAspectJAutoProxy(proxyTargetClass=true) //开启Aspect生成代理对象
 public class MyConfig {
 }

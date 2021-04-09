@@ -1,6 +1,5 @@
-package aop;
+package aopanno;
 
-import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.stereotype.Component;
 
 /**

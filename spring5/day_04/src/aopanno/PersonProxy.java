@@ -1,4 +1,4 @@
-package aop;
+package aopanno;
 
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
@@ -15,7 +15,7 @@ import org.springframework.stereotype.Component;
 @Order(4)
 public class PersonProxy {
 
-    @Before(value="execution(* aop.User.add(..))")
+    @Before(value="execution(* aopanno.User.add(..))")
     public void before(){
         System.out.println("Person before");
     }

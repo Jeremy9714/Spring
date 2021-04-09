@@ -1,6 +1,6 @@
 package test;
 
-import aop.User;
+import aopanno.User;
 import config.MyConfig;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;

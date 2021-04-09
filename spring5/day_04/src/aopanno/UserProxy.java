@@ -1,4 +1,4 @@
-package aop;
+package aopanno;
 
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.*;
@@ -16,7 +16,7 @@ import org.springframework.stereotype.Component;
 public class UserProxy {
 
     //抽取相同切入点
-    @Pointcut(value="execution(* aop.User.add(..))")
+    @Pointcut(value="execution(* aopanno.User.add(..))")
     public void pointCut(){}
 
     //前置通知
