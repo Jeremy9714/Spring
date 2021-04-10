@@ -21,7 +21,7 @@ public class UserService {
     //添加注入属性注解
 //    @Autowired
 //    @Qualifier(value="userDAOImpl") //根据属性的名称进行注入
-    @Resource(name="userDAOImpl") //
+    @Resource(name="userDAOImpl") //可以根据属性名称注入，也可以根据属性类型注入
     private UserDAO userDAO;
 
     //注入基本类型属性

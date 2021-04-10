@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--init-method属性设置bean的初始化方法-->
+    <!--destory-method属性设置bean的销毁方法-->
+    <bean id="orders" class="bean.Orders" init-method="init" destroy-method="destory">
+        <property name="name" value="order_1"></property>
+    </bean>
+
+    <!--配置后置处理器-->
+    <!--后置处理器会对当前配置文件中所有的bean添加后置处理器的处理-->
+    <bean id="beanPost" class="bean.BeanPost"></bean>
+</beans>
