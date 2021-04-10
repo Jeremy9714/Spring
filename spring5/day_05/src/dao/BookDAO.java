@@ -20,4 +20,10 @@ public interface BookDAO {
     Book queryBook(String id);
 
     List<Book> queryList();
+
+    void batchAdd(List<Object[]> batchArgs);
+
+    void batchUpdate(List<Object[]> batchArgs);
+
+    void batchDelete(List<Object[]> batchArgs);
 }
