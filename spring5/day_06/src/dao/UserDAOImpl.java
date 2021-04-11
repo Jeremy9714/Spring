@@ -12,7 +12,7 @@ import javax.annotation.Resource;
 @Repository
 public class UserDAOImpl implements UserDAO {
 
-    @Resource(name = "jdbcTemplate")
+    @Resource
     private JdbcTemplate jdbcTemplate;
 
     @Override

@@ -13,14 +13,14 @@ import javax.annotation.Resource;
  * @create 2021-04-10-19:43
  */
 @Service
-//@Transactional //为这类全部的方法添加事务
+@Transactional(propagation = Propagation.REQUIRED, isolation = Isolation.REPEATABLE_READ, timeout = 5) //为这类全部的方法添加事务
 public class UserService {
 
     @Resource
     private UserDAO userDAO;
 
     //为该方法添加事务
-    @Transactional(propagation = Propagation.REQUIRED, isolation = Isolation.REPEATABLE_READ, timeout = 5)
+//    @Transactional(propagation = Propagation.REQUIRED, isolation = Isolation.REPEATABLE_READ, timeout = 5)
     public void transaction() {
         userDAO.addMoney();
 
