@@ -12,6 +12,13 @@ import service.UserService;
 public class TxTest {
 
     @Test
+    public void test2() {
+        ApplicationContext context = new ClassPathXmlApplicationContext("bean2.xml");
+        UserService userService = context.getBean("userService", UserService.class);
+        userService.transaction();
+    }
+
+    @Test
     public void test1() {
         ApplicationContext context = new ClassPathXmlApplicationContext("bean1.xml");
         UserService userService = context.getBean("userService", UserService.class);
