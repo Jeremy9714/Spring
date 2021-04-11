@@ -17,3 +17,4 @@ public class UserLog {
         log.warn("hello log4j2");
     }
 }
+
