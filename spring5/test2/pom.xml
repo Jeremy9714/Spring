@@ -17,6 +17,8 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
+    <!--自定义的全局变量-->
+    <junit.version>4.11</junit.version>
   </properties>
 
   <dependencies>
@@ -40,10 +42,27 @@
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
-      <version>4.11</version>
+      <!--通过EL表达式使用全局变量-->
+      <version>${junit.version}</version>
       <scope>test</scope>
     </dependency>
   </dependencies>
 
+  <build>
+    <!--资源插件，会告诉maven把指定目录下的指定扩展名规则的文件拷贝到target/classes目录下-->
+    <resources>
+      <resource>
+        <!--指定要处理的目录-->
+        <directory>src/main/java</directory>
+        <!--要处理的文件规则-->
+        <includes>
+          <include>**/*.properties</include>
+          <include>**/*.xml</include>
+        </includes>
+        <!--不使用默认的过滤器-->
+        <filtering>false</filtering>
+      </resource>
+    </resources>
+  </build>
 
 </project>
