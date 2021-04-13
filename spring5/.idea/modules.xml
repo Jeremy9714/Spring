@@ -7,8 +7,9 @@
       <module fileurl="file://$PROJECT_DIR$/day_04/day_04.iml" filepath="$PROJECT_DIR$/day_04/day_04.iml" />
       <module fileurl="file://$PROJECT_DIR$/day_05/day_05.iml" filepath="$PROJECT_DIR$/day_05/day_05.iml" />
       <module fileurl="file://$PROJECT_DIR$/day_06/day_06.iml" filepath="$PROJECT_DIR$/day_06/day_06.iml" />
-      <module fileurl="file://$PROJECT_DIR$/demoreactor/demoreactor.iml" filepath="$PROJECT_DIR$/demoreactor/demoreactor.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring5.iml" filepath="$PROJECT_DIR$/spring5.iml" />
+      <module fileurl="file://$PROJECT_DIR$/test/test.iml" filepath="$PROJECT_DIR$/test/test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/test2/test2.iml" filepath="$PROJECT_DIR$/test2/test2.iml" />
     </modules>
   </component>
 </project>
